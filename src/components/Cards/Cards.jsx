@@ -9,8 +9,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   }
 
   return (
-    <div className={styles.container}>
-        <Typography gutterBottom variant="h4" component="h2"></Typography>
+    <div className={styles.container}>  
       <Grid container spacing={3} justify="center">
         <CardComponent
           className={styles.infected}
