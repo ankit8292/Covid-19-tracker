@@ -7,17 +7,27 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return 'Loading...';
   }
-
+  let activecases=confirmed.value-deaths.value-recovered.value;
   return (
     <div className={styles.container}>  
+
       <Grid container spacing={3} justify="center">
+      <CardComponent
+          className={styles.active}
+          cardTitle="Active"
+          value={activecases}  
+          lastUpdate={lastUpdate}
+          cardSubtitle="Number of total active cases from COVID-19."
+        />
+
         <CardComponent
           className={styles.infected}
           cardTitle="Infected"
           value={confirmed.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of active cases from COVID-19."
+          cardSubtitle="Number of total confirmed cases from COVID-19."
         />
+
         <CardComponent
           className={styles.recovered}
           cardTitle="Recovered"
