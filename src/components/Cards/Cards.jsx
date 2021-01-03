@@ -17,7 +17,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           cardTitle="Active"
           value={activecases}  
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of total active cases from COVID-19."
+          cardSubtitle="Total number of active cases from COVID-19."
         />
 
         <CardComponent
@@ -25,7 +25,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           cardTitle="Infected"
           value={confirmed.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of total confirmed cases from COVID-19."
+          cardSubtitle="Total number of total confirmed cases from COVID-19."
         />
 
         <CardComponent
@@ -33,14 +33,14 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           cardTitle="Recovered"
           value={recovered.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of recoveries from COVID-19."
+          cardSubtitle="Total number of total recoveries from COVID-19."
         />
         <CardComponent
           className={styles.deaths}
           cardTitle="Deaths"
           value={deaths.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of deaths caused by COVID-19."
+          cardSubtitle="Total number of total deaths caused by COVID-19."
         />
       </Grid>
     </div>
